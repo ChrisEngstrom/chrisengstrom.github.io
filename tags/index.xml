@@ -29,5 +29,50 @@
       <description></description>
     </item>
     
+    <item>
+      <title>old site</title>
+      <link>/tags/old-site/</link>
+      <pubDate>Tue, 22 Jun 2010 12:00:00 -0500</pubDate>
+      
+      <guid>/tags/old-site/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phone</title>
+      <link>/tags/phone/</link>
+      <pubDate>Tue, 11 May 2010 12:00:00 -0500</pubDate>
+      
+      <guid>/tags/phone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>techy</title>
+      <link>/tags/techy/</link>
+      <pubDate>Tue, 11 May 2010 12:00:00 -0500</pubDate>
+      
+      <guid>/tags/techy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WordPress plugin</title>
+      <link>/tags/wordpress-plugin/</link>
+      <pubDate>Tue, 11 May 2010 12:00:00 -0500</pubDate>
+      
+      <guid>/tags/wordpress-plugin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>youtube</title>
+      <link>/tags/youtube/</link>
+      <pubDate>Tue, 11 May 2010 12:00:00 -0500</pubDate>
+      
+      <guid>/tags/youtube/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

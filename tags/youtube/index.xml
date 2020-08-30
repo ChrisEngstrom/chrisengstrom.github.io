@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>youtube on Chris Engstrom</title>
+    <link>/tags/youtube/</link>
+    <description>Recent content in youtube on Chris Engstrom</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 11 May 2010 12:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="/tags/youtube/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mother&#39;s Day</title>
+      <link>/blog/mothers-day/</link>
+      <pubDate>Tue, 11 May 2010 12:00:00 -0500</pubDate>
+      
+      <guid>/blog/mothers-day/</guid>
+      <description>I know I am late because Mother’s Day was this past Sunday. I didn’t actually forget, thank you very little, I just found a neat plugin that I wanted to try out called Smart Youtube that lets you embed youtube videos into your WordPress site really easily. I posted this video on my mom’s Facebook wall to remind her of what it is like when I am home. Here goes nothing…</description>
+    </item>
+    
+  </channel>
+</rss>

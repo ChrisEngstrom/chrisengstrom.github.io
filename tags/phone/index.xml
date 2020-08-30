@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>phone on Chris Engstrom</title>
+    <link>/tags/phone/</link>
+    <description>Recent content in phone on Chris Engstrom</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 11 May 2010 12:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="/tags/phone/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DROID Incredible by HTC</title>
+      <link>/blog/droid-incredible-by-htc/</link>
+      <pubDate>Tue, 11 May 2010 12:00:00 -0500</pubDate>
+      
+      <guid>/blog/droid-incredible-by-htc/</guid>
+      <description>The news of Alltel in my area being bought out by Verizon had me quite excited when I had first heard about it. At that time the Google Nexus One was just about to be released and I didn’t know there was going to be a correlation. Soon after I had heard Alltel was getting bought out I also found out that the Google Nexus One would be coming to Verizon in the Spring of 2010!</description>
+    </item>
+    
+  </channel>
+</rss>
