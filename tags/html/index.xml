@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTML on Chris Engstrom</title>
+    <link>/tags/html/</link>
+    <description>Recent content in HTML on Chris Engstrom</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Jun 2010 12:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTML/CSS Horizontal Menu</title>
+      <link>/blog/html-css-horizontal-menu/</link>
+      <pubDate>Sun, 27 Jun 2010 12:00:00 -0500</pubDate>
+      
+      <guid>/blog/html-css-horizontal-menu/</guid>
+      <description>/* HTML/CSS Horizontal Menu Post */.horizontal-menu {list-style: none;margin: 20px 20px 70px !important;padding: 0;width: 525px}.horizontal-menu li {display: inline;position: relative;}.horizontal-menu li a {text-decoration: none;padding: 5px 0;width: 100px;background: #32522b;color: #eee;float: left;color: #8292A0;font-weight: bold;text-align: center;border-left: 1px solid #121212;}.horizontal-menu li a:hover {background: #92C088;color: #252B30}.first_menu_item {border: none !</description>
+    </item>
+    
+  </channel>
+</rss>

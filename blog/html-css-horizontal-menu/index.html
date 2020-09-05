@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+  <meta name="description" content="Many pages that I have seen that are organized pretty well have horizontal menus, so I want to teach myself how to do them and get good at it.">
+  <meta name="author" content="Chris Engstrom">
+  <meta name="generator" content="Hugo 0.74.3" />
+  
+  <!-- Mobile Specific Metas -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML/CSS Horizontal Menu</title>
+  <link rel="icon" href="/images/favicon.png">
+
+  <!-- Twitter Bootstrs CSS -->
+  <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css">
+  <!-- Ionicons Fonts Css -->
+  <link rel="stylesheet" href="/plugins/ionicons/ionicons.min.css">
+  <!-- animate css -->
+  <link rel="stylesheet" href="/plugins/animate-css/animate.css">
+  <!-- Hero area slider css-->
+  <link rel="stylesheet" href="/plugins/slider/slider.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="/plugins/slick/slick.css">
+  <!-- Fancybox -->
+  <link rel="stylesheet" href="/plugins/fancybox/jquery.fancybox.css">
+  <!-- hover -->
+  <link rel="stylesheet" href="/plugins/hover/hover-min.css">
+  <!-- template main css file -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+</head><body><section class="top-bar animated-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<a class="navbar-brand" href="/">
+						<img src="/images/logo.png" alt="Chris Engstrom">
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+						aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse" id="navigation">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item">
+								<a class="nav-link" href="/">Home</a>
+							</li>
+							
+							<li class="nav-item">
+								<a class="nav-link" href="/blog">Blog</a>
+							</li>
+							
+							<li class="nav-item">
+								<a class="nav-link" href="/contact">Contact</a>
+							</li>
+							
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="global-page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h2>HTML/CSS Horizontal Menu</h2>
+                    <div class="portfolio-meta">
+                        <span>Sunday, Jun 27, 2010</span>|
+                        <span> Tags:
+                            HTML, CSS, horizontal menu, web development, old site
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="single-post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                
+                <div class="post-content">
+                    
+
+<style>
+    /* HTML/CSS Horizontal Menu Post */
+    .horizontal-menu {
+        list-style: none;
+        margin: 20px 20px 70px !important;
+        padding: 0;
+        width: 525px
+    }
+    .horizontal-menu li {
+        display: inline;
+        position: relative;
+    }
+    .horizontal-menu li a {
+        text-decoration: none;
+        padding: 5px 0;
+        width: 100px;
+        background: #32522b;
+        color: #eee;
+        float: left;
+        color: #8292A0;
+        font-weight: bold;
+        text-align: center;
+        border-left: 1px solid #121212;
+    }
+    .horizontal-menu li a:hover {
+        background: #92C088;
+        color: #252B30
+    }
+
+    .first_menu_item {
+        border: none !important;
+    }
+
+    .horizontal-menu-1 {
+        list-style: none;
+        margin: 20px;
+        padding: 0;
+        width: 525px
+    }
+
+    .horizontal-menu-2 {
+        list-style: none;
+        margin: 20px;
+        padding: 0;
+        width: 525px
+    }
+    .horizontal-menu-2 li {
+        display: inline;
+    }
+
+    .horizontal-menu-3 {
+        list-style: none;
+        margin: 20px 20px 70px !important;
+        padding: 0;
+        width: 525px
+    }
+    .horizontal-menu-3 li {
+        display: inline
+    }
+    .horizontal-menu-3 li a {
+        text-decoration: none;
+        padding: 5px 0;
+        width: 100px;
+        background: #32522b;
+        color: #eee;
+        float: left;
+        color: #8292A0;
+        font-weight: bold;
+    }
+
+    .horizontal-menu-4 {
+        list-style: none;
+        margin: 20px 20px 70px !important;
+        padding: 0;
+        width: 525px
+    }
+    .horizontal-menu-4 li{
+        display: inline
+    }
+    .horizontal-menu-4 li a{
+        text-decoration: none;
+        padding: 5px 0;
+        width: 100px;
+        background: #32522b;
+        color: #eee;
+        float: left;
+        color: #8292A0;
+        font-weight: bold;
+        text-align: center;
+        border-left: 1px solid #121212;
+    }
+</style>
+
+<h3 id="intro">Intro</h3>
+<p>Many pages that I have seen that are organized pretty well have horizontal menus, so I want to teach myself how to do them and get good at it. My alterior motive to writing this post is that I need one of these to use for a jQuery post I originally planned on doing before this but forgot the css code back at work. So here I am about to do it again but this time understand it better than I did the first time. That and repitition helps us learn right?  Well anyways once I post this you can look forward to a post about using jQuery’s <code>slideDown()</code> and <code>slideUp()</code> functions to make your menu look pretty awesome.</p>
+<h3 id="did-someone-order-a-menu">Did someone order a menu?</h3>
+<p>The first thing you’ll need is a menu to mess with. Now if you don’t already have one that a client will be using then here is a simple little menu I made up. I’ll even put it on here so you can grab it if you are following along. I know this is just a single level unordered list, but for making a horizontal menu that is all you need. In a later post I will add another level to make it a drop down menu.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">ul</span>&gt;
+        &lt;<span style="color:#f92672">li</span>&gt;Heading 1&lt;/<span style="color:#f92672">li</span>&gt;
+        &lt;<span style="color:#f92672">li</span>&gt;Heading 2&lt;/<span style="color:#f92672">li</span>&gt;
+        &lt;<span style="color:#f92672">li</span>&gt;Heading 3&lt;/<span style="color:#f92672">li</span>&gt;
+        &lt;<span style="color:#f92672">li</span>&gt;Heading 4&lt;/<span style="color:#f92672">li</span>&gt;
+        &lt;<span style="color:#f92672">li</span>&gt;Heading 5&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;/<span style="color:#f92672">ul</span>&gt;
+</code></pre></div>
+
+<ul>
+    <li>Heading 1</li>
+    <li>Heading 2</li>
+    <li>Heading 3</li>
+    <li>Heading 4</li>
+    <li>Heading 5</li>
+</ul>
+
+<p>I have added anchors going nowhere and here is what it looks like without any styling whatsoever (other than what is in my installed theme already):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">ul</span>&gt;
+        &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>&gt;Heading 1&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+        &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>&gt;Heading 2&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+        &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>&gt;Heading 3&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+        &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>&gt;Heading 4&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+        &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>&gt;Heading 5&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;/<span style="color:#f92672">ul</span>&gt;
+</code></pre></div>
+
+<ul>
+    <li><a href="#">Heading 1</a></li>
+    <li><a href="#">Heading 2</a></li>
+    <li><a href="#">Heading 3</a></li>
+    <li><a href="#">Heading 4</a></li>
+    <li><a href="#">Heading 5</a></li>
+</ul>
+
+<p>As you can see we have a ways to go to make it look like any sort of horizontal menu that we want to use. Here is what we will have when we are done with our styling:</p>
+
+
+<ul class="horizontal-menu">
+    <li><a class="first_menu_item" href="#">Heading 1</a></li>
+    <li><a href="#">Heading 2</a></li>
+    <li><a href="#">Heading 3</a></li>
+    <li><a href="#">Heading 4</a></li>
+    <li><a href="#">Heading 5</a></li>
+</ul>
+
+<h3 id="lets-dig-in">Let&rsquo;s dig in!</h3>
+<p>I’ll be giving the <code>&lt;ul&gt;</code> (unordered list) a <code>class</code> to make it easier to work with in our css. I am going to give mine the id of <code>horizontal-menu</code>. What we are going to do first is give the list 20px of margin on all sides, 0 padding on all sides, remove the bullets, and give it an overall width to be contained in.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    .<span style="color:#a6e22e">horizontal-menu</span> {
+        <span style="color:#66d9ef">list-style</span>:<span style="color:#66d9ef">none</span>;
+        <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+        <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">525</span><span style="color:#66d9ef">px</span>
+    }
+</code></pre></div>
+
+<ul class="horizontal-menu-1">
+    <li><a href="#">Heading 1</a></li>
+    <li><a href="#">Heading 2</a></li>
+    <li><a href="#">Heading 3</a></li>
+    <li><a href="#">Heading 4</a></li>
+    <li><a href="#">Heading 5</a></li>
+</ul>
+
+<h3 id="make-it-horizontal">Make it horizontal</h3>
+<p>Now we can change the css to make it display horizontally. We will do so by making every <code>&lt;li&gt;</code> (list item) display inline right next to each other with the following code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    .<span style="color:#a6e22e">horizontal-menu</span> {
+        <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline</span>;
+    }
+</code></pre></div>
+
+<ul class="horizontal-menu-2">
+    <li><a href="#">Heading 1</a></li>
+    <li><a href="#">Heading 2</a></li>
+    <li><a href="#">Heading 3</a></li>
+    <li><a href="#">Heading 4</a></li>
+    <li><a href="#">Heading 5</a></li>
+</ul>
+
+<h3 id="get-rid-of-the-linky-ness-and-color-it">Get rid of the linky-ness and color it</h3>
+<p>We are going to want to take out the underline effect of the links along with adding some padding to the top and bottom. To make it look a little more presentable I am going to color the background and text so that it goes with the theme I currently have installed (at the time with with the old site). I’m also going to make the text bold to make it a bit easier to read.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    .<span style="color:#a6e22e">horizontal-menu</span> <span style="color:#f92672">li</span> <span style="color:#f92672">a</span> {
+        <span style="color:#66d9ef">text-decoration</span>: <span style="color:#66d9ef">none</span>;
+        <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+        <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#32522b</span>;
+        <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#eee</span>;
+        <span style="color:#66d9ef">float</span>: <span style="color:#66d9ef">left</span>;
+        <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#8292A0</span>;
+        <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>;
+    }
+</code></pre></div>
+
+<ul class="horizontal-menu-3">
+    <li><a href="#">Heading 1</a></li>
+    <li><a href="#">Heading 2</a></li>
+    <li><a href="#">Heading 3</a></li>
+    <li><a href="#">Heading 4</a></li>
+    <li><a href="#">Heading 5</a></li>
+</ul>
+
+<h3 id="space-it-out-and-give-it-a-border">Space it out and give it a border</h3>
+<p>So right now it looks kinda scrunched against the left side and like it is all melded together. To clean that up some I am going to make the text centered within the 100px it has as well as giving the left side of each of them a 1px border that matches the background of my theme. We’ll just need to add that to the existing <code>.horizontal-menu li a{}</code> entry in our css.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    .<span style="color:#a6e22e">horizontal-menu</span> <span style="color:#f92672">li</span> <span style="color:#f92672">a</span> {
+        <span style="color:#960050;background-color:#1e0010">...</span>
+        <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+        <span style="color:#66d9ef">border-left</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#121212</span>;
+    }
+</code></pre></div>
+
+<ul class="horizontal-menu-4">
+    <li><a href="#">Heading 1</a></li>
+    <li><a href="#">Heading 2</a></li>
+    <li><a href="#">Heading 3</a></li>
+    <li><a href="#">Heading 4</a></li>
+    <li><a href="#">Heading 5</a></li>
+</ul>
+
+<h3 id="remove-the-left-border-on-the-first-menu-item">Remove the left border on the first menu item</h3>
+<p>Now that we&rsquo;ve added a border to each menu item the first one looks a little off, doesn&rsquo;t it? I try to shoot for pixel perfect designs and implementations so that one pixel border is standing out to me. Let&rsquo;s get rid of that by adding a <code>.first_menu_item</code> class to the first menu item&rsquo;s anchor that removes the border by setting the border to none and adding <code>!important</code> to ensure it is enforced over any previous CSS rules.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    .<span style="color:#a6e22e">first_menu_item</span> {
+        <span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">none</span> <span style="color:#75715e">!important</span>;
+    }
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    ...
+    &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;first_menu_item&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>&gt;Heading 1&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+    ...
+</code></pre></div>
+
+<ul class="horizontal-menu-4">
+    <li><a class="first_menu_item" href="#">Heading 1</a></li>
+    <li><a href="#">Heading 2</a></li>
+    <li><a href="#">Heading 3</a></li>
+    <li><a href="#">Heading 4</a></li>
+    <li><a href="#">Heading 5</a></li>
+</ul>
+
+<h3 id="nifty-rollover-effect">Nifty rollover effect</h3>
+<p>Ahh, doesn&rsquo;t that look better? The final thing I am going to do is give it a rollover effect. To pick the colors that I liked I used the color wizard found <a href="http://www.colorsontheweb.com/Color-Tools/Color-Wizard">here</a> (since this post is really old that website may not be the best solution <a href="https://coolors.co/">this</a> is a newer one you could use or just look for a current color scheme generator you like).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    .<span style="color:#a6e22e">horizontal-menu</span> <span style="color:#f92672">li</span> <span style="color:#f92672">a</span>:<span style="color:#a6e22e">hover</span> {
+        <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#92C088</span>;
+        <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#252B30</span>
+    }
+</code></pre></div>
+
+<ul class="horizontal-menu">
+    <li><a class="first_menu_item" href="#">Heading 1</a></li>
+    <li><a href="#">Heading 2</a></li>
+    <li><a href="#">Heading 3</a></li>
+    <li><a href="#">Heading 4</a></li>
+    <li><a href="#">Heading 5</a></li>
+</ul>
+
+<h3 id="done">Done!</h3>
+<p>That’s it! Now you have a pretty neat looking horizontal menu to use. Of course, like I mentioned in the beginning of this post, I am now going to take this base horizontal menu and create a two tier menu with drop down effects using jQuery. Look forward to seeing that post soon!</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Footer Section Start -->
+<footer id="footer">
+    <div class="container">
+        <div class="row content-justify-between">
+            <div class="col-md-8 col-12 text-center text-lg-left text-md-left">
+                <p class="copyright">
+                    Copyright &#169;
+                    <span>
+                        2010 - <script>document.write(new Date().getFullYear())</script>
+                    </span>
+                    Chris Engstrom. All rights reserved.
+                </p>
+            </div>
+            <div class="col-md-4 col-12">
+                <!-- Social Media -->
+                <ul class="social text-center text-md-right text-lg-right">
+                    
+                    <li><a href="https://github.com/ChrisEngstrom" target="_blank"><i class="ion-social-github"></i></a></li>
+                    
+                    <li><a href="https://www.linkedin.com/in/christopherengstrom" target="_blank"><i class="ion-social-linkedin"></i></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer section end -->
+
+<!-- jquery -->
+<script src="/plugins/jQuery/jquery.min.js"></script>
+<!-- Form Validation -->
+<script src="/plugins/form-validation/jquery.form.js"></script>
+<script src="/plugins/form-validation/jquery.validate.min.js"></script>
+<!-- slick slider -->
+<script src="/plugins/slick/slick.min.js"></script>
+<!-- bootstrap js -->
+<script src="/plugins/bootstrap/bootstrap.min.js"></script>
+<!-- wow js -->
+<script src="/plugins/wow-js/wow.min.js"></script>
+<!-- slider js -->
+<script src="/plugins/slider/slider.js"></script>
+<!-- Fancybox -->
+<script src="/plugins/fancybox/jquery.fancybox.js"></script>
+<!-- template main js -->
+
+<script src="/js/script.min.js"></script>
+<!-- google analitycs -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-17377465-2', 'auto');
+    ga('send', 'pageview');
+</script></body>
+</html>

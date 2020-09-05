@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>alert on Chris Engstrom</title>
+    <link>/tags/alert/</link>
+    <description>Recent content in alert on Chris Engstrom</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 Oct 2010 12:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="/tags/alert/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why Isnt This Working?!?!</title>
+      <link>/blog/why-isnt-this-working/</link>
+      <pubDate>Sun, 24 Oct 2010 12:00:00 -0500</pubDate>
+      
+      <guid>/blog/why-isnt-this-working/</guid>
+      <description>When working with JavaScript or jQuery it is important to remember to check and make sure that the basic functionality is working correctly before you get frustrated and upset that absolutely NOTHING is working.
+Recently I was working on a project at work and no matter what I did with my jQuery statements, I couldn’t get anything to work. I was looking at examples online and making sure mine was following the same concept but still nothing was working.</description>
+    </item>
+    
+  </channel>
+</rss>

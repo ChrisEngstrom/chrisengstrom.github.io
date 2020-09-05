@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+  <meta name="description" content="The client wanted to be able to click the actual position title and have the description appear and disappear accordingly.">
+  <meta name="author" content="Chris Engstrom">
+  <meta name="generator" content="Hugo 0.74.3" />
+  
+  <!-- Mobile Specific Metas -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fiddling With Javascript</title>
+  <link rel="icon" href="/images/favicon.png">
+
+  <!-- Twitter Bootstrs CSS -->
+  <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css">
+  <!-- Ionicons Fonts Css -->
+  <link rel="stylesheet" href="/plugins/ionicons/ionicons.min.css">
+  <!-- animate css -->
+  <link rel="stylesheet" href="/plugins/animate-css/animate.css">
+  <!-- Hero area slider css-->
+  <link rel="stylesheet" href="/plugins/slider/slider.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="/plugins/slick/slick.css">
+  <!-- Fancybox -->
+  <link rel="stylesheet" href="/plugins/fancybox/jquery.fancybox.css">
+  <!-- hover -->
+  <link rel="stylesheet" href="/plugins/hover/hover-min.css">
+  <!-- template main css file -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+</head><body><section class="top-bar animated-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<a class="navbar-brand" href="/">
+						<img src="/images/logo.png" alt="Chris Engstrom">
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+						aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse" id="navigation">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item">
+								<a class="nav-link" href="/">Home</a>
+							</li>
+							
+							<li class="nav-item">
+								<a class="nav-link" href="/blog">Blog</a>
+							</li>
+							
+							<li class="nav-item">
+								<a class="nav-link" href="/contact">Contact</a>
+							</li>
+							
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="global-page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h2>Fiddling With Javascript</h2>
+                    <div class="portfolio-meta">
+                        <span>Tuesday, Jun 22, 2010</span>|
+                        <span> Tags:
+                            show, hide, css, getElementById, JavaScript, PHP, web development, WordPress, T&S Web Design, old site
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="single-post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                
+                <div class="post-content">
+                    <h3 id="intro">Intro</h3>
+<p>While I was at work the other day we received an update request from a client. Since I saw it first I assigned it to myself and started to work at it. There were only two things that the client wanted us to change. The first was changing the suite number for a particular address, which took about five seconds to track down and change. The second was that he wanted to post a job on their careers page. Posting the job was easy enough but he also had another thing he wanted done at the same time. He wanted to be able to click the actual position title and have the description appear and disappear accordingly.</p>
+<p>It was towards the end of the day by the time I got to this task so I did a little research and fiddling around with some JavaScript but was unsuccessful in my attempts to get it to work right. So, to try to learn how to do that specific task and learn more about JavaScript in general, I am creating this post. Here goes nothing.</p>
+<h3 id="importing-external-javascript-file">Importing External JavaScript File</h3>
+<p>The first thing I am doing is creating a .js (JaScript) file to write my code in. I will be placing it in header.php right after the other .js file that was included in my template. It doesn’t really matter where you put it (body or head) but from what I have read, if you are importing an external .js file it is generally uniform to put it in the head. Here is how the line of code looks.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">&lt;?php</span> <span style="color:#a6e22e">bloginfo</span>(<span style="color:#e6db74">&#39;template_directory&#39;</span>); <span style="color:#75715e">?&gt;</span><span style="color:#e6db74">/js/show-hide.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h4 id="new-site-note"><em>New Site Note</em></h4>
+<p>Since this site is no longer a WordPress site the setup for the functionality has changed to not include a separate JavaScript file for the function required to show/hide the text and instead it is included directly in this post. Granted, it probably could have been done this way originally but you live and learn. See the end of the post for the <a href="#full-code-example">full code example</a>.</p>
+<h3 id="the-actual-javascript">The Actual JavaScript</h3>
+<p>The next part required a little bit of research (google) and some programming know how learned from some beginner programming courses that I have taken. I’ll show you the code, then explain it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">switch_hidden</span>(<span style="color:#a6e22e">id</span>) {
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">id</span>);
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;block&#39;</span>)
+            <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;none&#39;</span>;
+        <span style="color:#66d9ef">else</span>
+            <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;block&#39;</span>;
+    }
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">switch_hidden</span>(<span style="color:#a6e22e">id</span>)
+</code></pre></div><p>Creates a function called switch_hidden that takes the id of an element as its parameter.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">id</span>);
+</code></pre></div><p>Creates a variable named e and goes to the document and gets the element passed to the function (id) by using just the id that was passed. You now have the element, whatever it is, stored in e.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">==</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">’</span>)
+        <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">none</span><span style="color:#960050;background-color:#1e0010">’</span>;
+</code></pre></div><p>If e’s styled display is set to block, change e’s styled display to none.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#66d9ef">else</span>
+        <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">‘</span><span style="color:#a6e22e">block</span><span style="color:#960050;background-color:#1e0010">’</span>;
+</code></pre></div><p>If e’s styled display is not set to block, change it to block.</p>
+<p>Something to keep in mind is that we are only going to call this function when a line of text is clicked.</p>
+<h3 id="implementation">Implementation</h3>
+<p>Setting up the html so the JavaScript can work with it is kind of confusing but once you see it it makes sense. At least it did for me. If you don’t mind the text that will trigger the event to show or hide the other text looking like a link then you can skip step one.</p>
+<ol>
+<li>
+<p>The first thing you are going to need to do is create a <code>&lt;div&gt;</code> around the element that you want to click to trigger the event and give that div a class. I named mine “show-hide”. This step is only useful to make the element not look like a link later using css.</p>
+</li>
+<li>
+<p>Next you should put the type of element that it is going to be. Whether that is a <code>&lt;p&gt;&lt;/p&gt;</code> or, in my case, <code>&lt;h4&gt;&lt;/h4&gt;</code>.</p>
+</li>
+<li>
+<p>Inside that tag make an anchor tag and give it an onclick event of <code>“switch_hidden(‘#’);”</code>, then close the opening tag and put in the text you want to be the trigger to show and hide the text. It should look something like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">h4</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">”switch_hidden(‘#’);”</span>&gt;Click Here…&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">h4</span>&gt;
+</code></pre></div></li>
+<li>
+<p>Now create another <code>&lt;div&gt;</code> and give it an id that relates to what it is. For my example I will give my div the id of “lorem”. As a note, with the way I have the function set up, to make it work correctly the text should be hidden to begin with so I will also be giving my div a class called “display_none”. In the css I do exactly that with this code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    .<span style="color:#a6e22e">display_none</span>{<span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">none</span>;}
+</code></pre></div></li>
+<li>
+<p>You can now fill in that <code>&lt;div&gt;</code> with whatever content you want to be able to show and hide.</p>
+</li>
+<li>
+<p>Once you are done doing that you need to link that <code>&lt;div&gt;</code> to the function we created. To do that all you need to do is pass in the id of the content <code>&lt;div&gt;</code> we just made. So in the case of our example you would change point 3.1’s code to…</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">h4</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">”switch_hidden(‘lorem’);”</span>&gt;Click Here…&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">h4</span>&gt;
+</code></pre></div></li>
+</ol>
+<h3 id="done">Done</h3>
+<p>And you should be done. My next heading and paragraph will be the example. Click on the heading and the paragraph underneath it will appear. I hope this helps you a little bit. I tried to be thorough in my explanation so I am sorry if it seems a little lengthy for such a simple function. I did leave some of the css styling out but I will more than likely add that at a later date when I have time.</p>
+
+
+<script type="text/javascript">
+    function switch_hidden(id) {
+        var e = document.getElementById(id);
+        if (e.style.display == 'block')
+            e.style.display = 'none';
+        else
+            e.style.display = 'block';
+    }
+</script>
+<div class="show-hide">
+    <h4>
+        <a onclick="switch_hidden('lorem');" style="cursor: pointer;">Click Here…</a>
+    </h4>
+    <div id="lorem" style="display: none;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eros turpis, semper eget convallis eget, vehicula vitae odio. Donec vulputate fermentum urna, ultricies volutpat dolor sagittis et. Nullam id massa vitae sem condimentum tristique et in urna. Curabitur sit amet tellus in nisi viverra pretium eget porttitor magna. Mauris ut mi risus, in volutpat lorem. Aliquam erat volutpat. Aliquam eu consectetur lacus. Fusce mattis dictum mollis. Vivamus feugiat velit a lectus mollis interdum. Proin risus tortor, aliquam ut rutrum ac, accumsan vel quam.</p>
+    </div>
+</div>
+
+<hr>
+<h3 id="full-code-example">Full Code Example</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
+        <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">switch_hidden</span>(<span style="color:#a6e22e">id</span>) {
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">id</span>);
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;block&#39;</span>)
+                <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;none&#39;</span>;
+            <span style="color:#66d9ef">else</span>
+                <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;block&#39;</span>;
+        }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;show-hide&#34;</span>&gt;
+        &lt;<span style="color:#f92672">h4</span>&gt;
+            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;switch_hidden(&#39;lorem&#39;);&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cursor: pointer;&#34;</span>&gt;Click Here…&lt;/<span style="color:#f92672">a</span>&gt;
+        &lt;/<span style="color:#f92672">h4</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;lorem&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;display: none;&#34;</span>&gt;
+            &lt;<span style="color:#f92672">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eros turpis, semper eget convallis eget, vehicula vitae odio. Donec vulputate fermentum urna, ultricies volutpat dolor sagittis et. Nullam id massa vitae sem condimentum tristique et in urna. Curabitur sit amet tellus in nisi viverra pretium eget porttitor magna. Mauris ut mi risus, in volutpat lorem. Aliquam erat volutpat. Aliquam eu consectetur lacus. Fusce mattis dictum mollis. Vivamus feugiat velit a lectus mollis interdum. Proin risus tortor, aliquam ut rutrum ac, accumsan vel quam.&lt;/<span style="color:#f92672">p</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Footer Section Start -->
+<footer id="footer">
+    <div class="container">
+        <div class="row content-justify-between">
+            <div class="col-md-8 col-12 text-center text-lg-left text-md-left">
+                <p class="copyright">
+                    Copyright &#169;
+                    <span>
+                        2010 - <script>document.write(new Date().getFullYear())</script>
+                    </span>
+                    Chris Engstrom. All rights reserved.
+                </p>
+            </div>
+            <div class="col-md-4 col-12">
+                <!-- Social Media -->
+                <ul class="social text-center text-md-right text-lg-right">
+                    
+                    <li><a href="https://github.com/ChrisEngstrom" target="_blank"><i class="ion-social-github"></i></a></li>
+                    
+                    <li><a href="https://www.linkedin.com/in/christopherengstrom" target="_blank"><i class="ion-social-linkedin"></i></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer section end -->
+
+<!-- jquery -->
+<script src="/plugins/jQuery/jquery.min.js"></script>
+<!-- Form Validation -->
+<script src="/plugins/form-validation/jquery.form.js"></script>
+<script src="/plugins/form-validation/jquery.validate.min.js"></script>
+<!-- slick slider -->
+<script src="/plugins/slick/slick.min.js"></script>
+<!-- bootstrap js -->
+<script src="/plugins/bootstrap/bootstrap.min.js"></script>
+<!-- wow js -->
+<script src="/plugins/wow-js/wow.min.js"></script>
+<!-- slider js -->
+<script src="/plugins/slider/slider.js"></script>
+<!-- Fancybox -->
+<script src="/plugins/fancybox/jquery.fancybox.js"></script>
+<!-- template main js -->
+
+<script src="/js/script.min.js"></script>
+<!-- google analitycs -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-17377465-2', 'auto');
+    ga('send', 'pageview');
+</script></body>
+</html>
