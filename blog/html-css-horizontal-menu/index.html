@@ -89,103 +89,7 @@
             <div class="col-md-12">
                 
                 <div class="post-content">
-                    
-
-<style>
-    /* HTML/CSS Horizontal Menu Post */
-    .horizontal-menu {
-        list-style: none;
-        margin: 20px 20px 70px !important;
-        padding: 0;
-        width: 525px
-    }
-    .horizontal-menu li {
-        display: inline;
-        position: relative;
-    }
-    .horizontal-menu li a {
-        text-decoration: none;
-        padding: 5px 0;
-        width: 100px;
-        background: #32522b;
-        color: #eee;
-        float: left;
-        color: #8292A0;
-        font-weight: bold;
-        text-align: center;
-        border-left: 1px solid #121212;
-    }
-    .horizontal-menu li a:hover {
-        background: #92C088;
-        color: #252B30
-    }
-
-    .first_menu_item {
-        border: none !important;
-    }
-
-    .horizontal-menu-1 {
-        list-style: none;
-        margin: 20px;
-        padding: 0;
-        width: 525px
-    }
-
-    .horizontal-menu-2 {
-        list-style: none;
-        margin: 20px;
-        padding: 0;
-        width: 525px
-    }
-    .horizontal-menu-2 li {
-        display: inline;
-    }
-
-    .horizontal-menu-3 {
-        list-style: none;
-        margin: 20px 20px 70px !important;
-        padding: 0;
-        width: 525px
-    }
-    .horizontal-menu-3 li {
-        display: inline
-    }
-    .horizontal-menu-3 li a {
-        text-decoration: none;
-        padding: 5px 0;
-        width: 100px;
-        background: #32522b;
-        color: #eee;
-        float: left;
-        color: #8292A0;
-        font-weight: bold;
-    }
-
-    .horizontal-menu-4 {
-        list-style: none;
-        margin: 20px 20px 70px !important;
-        padding: 0;
-        width: 525px
-    }
-    .horizontal-menu-4 li{
-        display: inline
-    }
-    .horizontal-menu-4 li a{
-        text-decoration: none;
-        padding: 5px 0;
-        width: 100px;
-        background: #32522b;
-        color: #eee;
-        float: left;
-        color: #8292A0;
-        font-weight: bold;
-        text-align: center;
-        border-left: 1px solid #121212;
-    }
-</style>
-
-<h3 id="intro">Intro</h3>
-<p>Many pages that I have seen that are organized pretty well have horizontal menus, so I want to teach myself how to do them and get good at it. My alterior motive to writing this post is that I need one of these to use for a jQuery post I originally planned on doing before this but forgot the css code back at work. So here I am about to do it again but this time understand it better than I did the first time. That and repitition helps us learn right?  Well anyways once I post this you can look forward to a post about using jQuery’s <code>slideDown()</code> and <code>slideUp()</code> functions to make your menu look pretty awesome.</p>
+                    <p>Many pages that I have seen that are organized pretty well have horizontal menus, so I want to teach myself how to do them and get good at it. My alterior motive to writing this post is that I need one of these to use for a jQuery post I originally planned on doing before this but forgot the css code back at work. So here I am about to do it again but this time understand it better than I did the first time. That and repitition helps us learn right?  Well anyways once I post this you can look forward to a post about using jQuery’s <code>slideDown()</code> and <code>slideUp()</code> functions to make your menu look pretty awesome.</p>
 <h3 id="did-someone-order-a-menu">Did someone order a menu?</h3>
 <p>The first thing you’ll need is a menu to mess with. Now if you don’t already have one that a client will be using then here is a simple little menu I made up. I’ll even put it on here so you can grab it if you are following along. I know this is just a single level unordered list, but for making a horizontal menu that is all you need. In a later post I will add another level to make it a drop down menu.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">ul</span>&gt;
@@ -342,6 +246,101 @@
 
 <h3 id="done">Done!</h3>
 <p>That’s it! Now you have a pretty neat looking horizontal menu to use. Of course, like I mentioned in the beginning of this post, I am now going to take this base horizontal menu and create a two tier menu with drop down effects using jQuery. Look forward to seeing that post soon!</p>
+
+
+<style>
+    /* HTML/CSS Horizontal Menu Post */
+    .horizontal-menu {
+        list-style: none;
+        margin: 20px 20px 70px !important;
+        padding: 0;
+        width: 525px
+    }
+    .horizontal-menu li {
+        display: inline;
+        position: relative;
+    }
+    .horizontal-menu li a {
+        text-decoration: none;
+        padding: 5px 0;
+        width: 100px;
+        background: #32522b;
+        color: #eee;
+        float: left;
+        color: #8292A0;
+        font-weight: bold;
+        text-align: center;
+        border-left: 1px solid #121212;
+    }
+    .horizontal-menu li a:hover {
+        background: #92C088;
+        color: #252B30
+    }
+
+    .first_menu_item {
+        border: none !important;
+    }
+
+    .horizontal-menu-1 {
+        list-style: none;
+        margin: 20px;
+        padding: 0;
+        width: 525px
+    }
+
+    .horizontal-menu-2 {
+        list-style: none;
+        margin: 20px;
+        padding: 0;
+        width: 525px
+    }
+    .horizontal-menu-2 li {
+        display: inline;
+    }
+
+    .horizontal-menu-3 {
+        list-style: none;
+        margin: 20px 20px 70px !important;
+        padding: 0;
+        width: 525px
+    }
+    .horizontal-menu-3 li {
+        display: inline
+    }
+    .horizontal-menu-3 li a {
+        text-decoration: none;
+        padding: 5px 0;
+        width: 100px;
+        background: #32522b;
+        color: #eee;
+        float: left;
+        color: #8292A0;
+        font-weight: bold;
+    }
+
+    .horizontal-menu-4 {
+        list-style: none;
+        margin: 20px 20px 70px !important;
+        padding: 0;
+        width: 525px
+    }
+    .horizontal-menu-4 li{
+        display: inline
+    }
+    .horizontal-menu-4 li a{
+        text-decoration: none;
+        padding: 5px 0;
+        width: 100px;
+        background: #32522b;
+        color: #eee;
+        float: left;
+        color: #8292A0;
+        font-weight: bold;
+        text-align: center;
+        border-left: 1px solid #121212;
+    }
+</style>
+
 
                 </div>
             </div>

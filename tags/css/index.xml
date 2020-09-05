@@ -17,7 +17,7 @@
       <pubDate>Sun, 27 Jun 2010 12:00:00 -0500</pubDate>
       
       <guid>/blog/html-css-horizontal-menu/</guid>
-      <description>/* HTML/CSS Horizontal Menu Post */.horizontal-menu {list-style: none;margin: 20px 20px 70px !important;padding: 0;width: 525px}.horizontal-menu li {display: inline;position: relative;}.horizontal-menu li a {text-decoration: none;padding: 5px 0;width: 100px;background: #32522b;color: #eee;float: left;color: #8292A0;font-weight: bold;text-align: center;border-left: 1px solid #121212;}.horizontal-menu li a:hover {background: #92C088;color: #252B30}.first_menu_item {border: none !</description>
+      <description>Many pages that I have seen that are organized pretty well have horizontal menus, so I want to teach myself how to do them and get good at it. My alterior motive to writing this post is that I need one of these to use for a jQuery post I originally planned on doing before this but forgot the css code back at work. So here I am about to do it again but this time understand it better than I did the first time.</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Tue, 22 Jun 2010 12:00:00 -0500</pubDate>
       
       <guid>/blog/fiddling-with-javascript/</guid>
-      <description>Intro While I was at work the other day we received an update request from a client. Since I saw it first I assigned it to myself and started to work at it. There were only two things that the client wanted us to change. The first was changing the suite number for a particular address, which took about five seconds to track down and change. The second was that he wanted to post a job on their careers page.</description>
+      <description>While I was at work the other day we received an update request from a client. Since I saw it first I assigned it to myself and started to work at it. There were only two things that the client wanted us to change. The first was changing the suite number for a particular address, which took about five seconds to track down and change. The second was that he wanted to post a job on their careers page.</description>
     </item>
     
   </channel>
